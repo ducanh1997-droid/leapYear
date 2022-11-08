@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính năm nhuận</title>
+</head>
+<body>
+        <input id="leapYear" type="text">
+        <p id="result"></p>
+        <button onclick="leapYear()">Submit</button>
+</body>
+<script>
+    function leapYear(){
+        var leapYear = document.getElementById("leapYear").value;
+        var result = document.getElementById("result");
+        if((leapYear%4) == 0 && (leapYear%100 != 0)){
+            result.innerHTML = "Là năm nhuận";
+        }else if((leapYear%100 == 0) && (leapYear%400 != 0)){
+            result.innerHTML = "Không phải là năm nhuận";
+        }else if((leapYear%100 == 0) && (leapYear%400 == 0)){
+            result.innerHTML = "Là năm nhuận";
+        }else{
+            result.innerHTML = "Không phải là năm nhuận";
+        }
+    }
+
+
+</script>
+</html>
